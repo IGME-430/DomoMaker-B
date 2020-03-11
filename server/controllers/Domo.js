@@ -19,7 +19,7 @@ const makeDomo = (req, res) => {
 
   const newDomo = new Domo.DomoModel(domoData);
 
-  const domoPromise = new newDomo.save();
+  const domoPromise = newDomo.save();
 
   domoPromise.then(() => res.json({redirect: '/maker'}));
 
